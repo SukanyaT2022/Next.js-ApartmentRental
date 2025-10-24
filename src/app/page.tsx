@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <div className="w-full h-[70vh] md:h-[70vh] lg:h-[100vh]">
       <div>
+        <p>test hello</p>
         <Header/>
     
       </div>
