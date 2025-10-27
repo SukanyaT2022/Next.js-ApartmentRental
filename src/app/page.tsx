@@ -13,8 +13,7 @@ export default function Home() {
     
       </div>
   {/* cards comp section- second section  */}
-      <div>
-        
+      <div className="bg-red-100 w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-10">    
       <CardComp/>
       </div>
   {/* <Address/> */}
