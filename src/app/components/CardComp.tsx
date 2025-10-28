@@ -1,16 +1,23 @@
 import React from 'react'
 import { FaRegHeart } from "react-icons/fa";
-const CardComp = () => {
+interface CardCompProps {
+imageSrcProp?: string;
+pricePerNightProp?: number;
+ratingProp?: number;
+reviewsCountProp?: number;
+locationProp?: string;
+bedroomsProp?: number;
+propertyTypeProp?: string;
+}
+const CardComp = ({imageSrcProp, pricePerNightProp, ratingProp, reviewsCountProp, locationProp, bedroomsProp, propertyTypeProp}:CardCompProps) => {
   return (
-  
-
 
 <div className=" bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
   <div className='relative'>
   <a href="#">
     <img
       className="rounded-t-lg h-[200px] w-full object-cover "
-      src="/beach2.jpg"
+      src={imageSrcProp}
       alt="Tech article thumbnail"
     />
   </a>
@@ -20,26 +27,26 @@ const CardComp = () => {
   </div>
   <div className="p-5">
   <p className="text-sm text-gray-700 dark:text-gray-400">
-     Apartment
+   {propertyTypeProp}
     </p>
     <a href="#">
       <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-   Malibu,CA
+{locationProp}
       </h5>
     </a>
     <p className=" text-sm text-gray-700 dark:text-gray-400">
-    4 bedrooms
+   {bedroomsProp} bedrooms
     </p>
    {/* main div for price and rate */}
    <div className='text-sm flex justify-between'>
  {/* reviews */}   
 <div className='flex gap-2 items-end'>
-<p className='bg-green-600 p-0.5 rounded'>10.0</p>
-<p>45 reviews</p>
+<p className='bg-green-600 p-0.5 rounded'>{ratingProp}</p>
+<p>{reviewsCountProp}reviews</p>
 </div>
 {/* price per night */}
 <div className='text-right'>
-<p className='text-xl font-bold'>$550</p>
+<p className='text-xl font-bold'>${pricePerNightProp}</p>
 <p>avg per night</p>  
 </div>
 

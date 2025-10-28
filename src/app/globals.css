@@ -43,3 +43,31 @@ background-size: cover;
 .custom-background-image{
   
 }
+/* below make icon underline when click  line 47 to 67*/
+.styleIcon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px;
+  
+}
+/* after is the line under icon line visible when hoover */
+.styleIcon::after{
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0px;
+  height: 2px;
+  background-color: red;
+
+}
+.styleIcon:hover::after{
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
