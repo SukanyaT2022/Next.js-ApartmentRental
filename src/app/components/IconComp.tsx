@@ -1,9 +1,32 @@
 import React from 'react'
 import { MdOutlineBeachAccess } from "react-icons/md";
-const IconComp = () => {
-  return (
+import { iconData } from '../../utils/data';
+import { JSX } from 'react/jsx-runtime';
+interface IconCompProps {
+ iconProp?: React.ReactNode;
+ labelProp?: string; 
+ selectedProp?: boolean;
+}
+
+const IconComp = ({iconProp, labelProp, selectedProp}:IconCompProps) => {
+  
+    return (
     <div className='grid grid-cols-4 md:grid-cols-4 lg:grid-cols-12 gap-2 w-[80%] m-auto py-10'>
-      <div className='styleIcon text-[#191E3B]'>
+      {
+        iconData.map((item)=>(
+          <div key={item.id} className='styleIcon text-[#191E3B] '>
+            {/* <item.icon className={`text-3xl ${selectedProp && ' text-blue-500'} `}/> */}
+            <item.icon className={`text-3xl ${selectedProp? ' text-blue-500': 'text-[#191E3B]'} `}/>
+            <p className={`text-sm font-bold ${selectedProp? ' text-blue-500': 'text-[#191E3B]'}`}>{item.label}</p>
+          </div>
+        ))
+      }
+        <div className='styleIcon text-[#191E3B] '>      
+            {iconProp}
+            <p className={`text-sm font-bold ${selectedProp? ' text-blue-500': 'text-[#191E3B]'}`}>{labelProp}</p>
+          </div>
+
+        {/* <div className='styleIcon text-[#191E3B]'>
          <MdOutlineBeachAccess className='text-3xl'/>
          <p className='text-sm font-bold'>Beachfront</p>
         </div>
@@ -57,12 +80,7 @@ const IconComp = () => {
          <MdOutlineBeachAccess className='text-3xl'/>
          <p className='text-sm font-bold'>Beachfront</p>
         </div>
-
-        <div className='styleIcon text-[#191E3B]'>
-         <MdOutlineBeachAccess className='text-3xl'/>
-         <p className='text-sm font-bold'>Beachfront</p>
-        </div>
-
+ */}
 
     </div>
   )
