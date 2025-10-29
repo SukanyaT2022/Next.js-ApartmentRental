@@ -11,20 +11,21 @@ interface IconCompProps {
 const IconComp = ({iconProp, labelProp, selectedProp}:IconCompProps) => {
   
     return (
-    <div className='grid grid-cols-4 md:grid-cols-4 lg:grid-cols-12 gap-2 w-[80%] m-auto py-10'>
+      // <div className='grid grid-cols-4 md:grid-cols-4 lg:grid-cols-12 gap-2 w-[90%] m-auto py-10 overflow-scroll'>
+    <div className='flex xl:grid xl:grid-cols-12 gap-2 w-[90%] m-auto py-10 overflow-x-scroll xl:overflow-x-hidden'>
       {
         iconData.map((item)=>(
-          <div key={item.id} className='styleIcon text-[#191E3B] '>
+          <div key={item.id} className='styleIcon text-[#191E3B] min-w-[100px] md:min-w-[100px] lg:min-w-[100px] '>
             {/* <item.icon className={`text-3xl ${selectedProp && ' text-blue-500'} `}/> */}
             <item.icon className={`text-3xl ${selectedProp? ' text-blue-500': 'text-[#191E3B]'} `}/>
             <p className={`text-sm font-bold ${selectedProp? ' text-blue-500': 'text-[#191E3B]'}`}>{item.label}</p>
           </div>
         ))
       }
-        <div className='styleIcon text-[#191E3B] '>      
+        {/* <div className='styleIcon text-[#191E3B] '>      
             {iconProp}
             <p className={`text-sm font-bold ${selectedProp? ' text-blue-500': 'text-[#191E3B]'}`}>{labelProp}</p>
-          </div>
+          </div> */}
 
         {/* <div className='styleIcon text-[#191E3B]'>
          <MdOutlineBeachAccess className='text-3xl'/>

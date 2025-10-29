@@ -5,6 +5,7 @@ import Address from "./components/Address";
 import CardComp from "./components/CardComp";
 import {data} from "../utils/data";
 import IconComp from "./components/IconComp";
+import BigBoxComp from "./components/BigBoxComp";
 export default function Home() {
   return (
     <div className="w-full h-[70vh] md:h-[70vh] lg:h-[100vh]">
@@ -18,7 +19,7 @@ export default function Home() {
 <IconComp/>
 
   {/* cards comp section- second section  */}
-      <div className="bg-red-100 w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-10">    
+      <div className=" w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-10 ">    
      {
       data.map((item)=>(
         <CardComp 
@@ -34,6 +35,10 @@ export default function Home() {
       ))
      }
    
+      </div>
+{/* middle sectiton */}
+      <div>
+<BigBoxComp/>
       </div>
   {/* <Address/> */}
      

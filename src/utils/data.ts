@@ -124,54 +124,54 @@ export const data =
       "icon": MdOutlinePool,
       "label": "Pool"
     },
-    // {
-    //   "id": 3,
-    //   "icon": MdOutlineFamilyRestroom,
-    //   "label": "Family Friendly"
-    // },
-    // {
-    //   "id": 4,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Beachfront"
-    // },
-    // {
-    //   "id": 5,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Mountain View"
-    // },
-    // {
-    //   "id": 6,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "City Center"
-    // },
-    // {
-    //   "id": 7,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Beachfront"
-    // },
-    // {
-    //   "id": 8,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Mountain View"
-    // },
-    // {
-    //   "id": 9,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "City Center"
-    // },
-    // {
-    //   "id": 10,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Beachfront"
-    // },
-    // {
-    //   "id": 11,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "Mountain View"
-    // },
-    // {
-    //   "id": 12,
-    //   "icon": MdOutlineBeachAccess,
-    //   "label": "City Center"
-    // },
+    {
+      "id": 3,
+      "icon": MdOutlinePool,
+      "label": "Family"
+    },
+    {
+      "id": 4,
+      "icon": MdOutlineBeachAccess,
+      "label": "Beachfront"
+    },
+    {
+      "id": 5,
+      "icon": MdOutlineBeachAccess,
+      "label": "Mountain "
+    },
+    {
+      "id": 6,
+      "icon": MdOutlineBeachAccess,
+      "label": "City"
+    },
+    {
+      "id": 7,
+      "icon": MdOutlineBeachAccess,
+      "label": "Beachfront"
+    },
+    {
+      "id": 8,
+      "icon": MdOutlineBeachAccess,
+      "label": "Mountain"
+    },
+    {
+      "id": 9,
+      "icon": MdOutlineBeachAccess,
+      "label": "City "
+    },
+    {
+      "id": 10,
+      "icon": MdOutlineBeachAccess,
+      "label": "Beachfront"
+    },
+    {
+      "id": 11,
+      "icon": MdOutlineBeachAccess,
+      "label": "Mountain"
+    },
+    {
+      "id": 12,
+      "icon": MdOutlineBeachAccess,
+      "label": "City"
+    },
   ]
