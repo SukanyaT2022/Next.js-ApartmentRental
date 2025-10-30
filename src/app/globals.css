@@ -63,11 +63,17 @@ background-size: cover;
   left: 0%;
   width: 0px;
   height: 2px;
-  background-color: red;
+  background-color:blue;
 
 }
 .styleIcon:hover::after{
   width: 100%;
   transition: width 0.3s ease-in-out;
+}
+.bigBoxCustumStyle{
+  /* //background image atmiddle section home page */
+background-image: url("../../public/beach3.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 }
 

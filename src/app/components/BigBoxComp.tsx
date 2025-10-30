@@ -9,7 +9,7 @@ interface BigBoxCompProps {
 }
 
 const BigBoxComp = ({
-  backgroundImageProp = "/beachHouse.jpg",
+  backgroundImageProp = "../../public/beach3.jpg",
   titleProp = "Rent your property confidently with Vrbo",
   descriptionProp = "With live-support, quick signup, and highly-rated guests, hosting on Vrbo can feel like a vacation.",
   buttonTextProp = "List your property",

@@ -6,6 +6,7 @@ import CardComp from "./components/CardComp";
 import {data} from "../utils/data";
 import IconComp from "./components/IconComp";
 import BigBoxComp from "./components/BigBoxComp";
+import BigBoxCustum from "./components/BigBoxCustum";
 export default function Home() {
   return (
     <div className="w-full h-[70vh] md:h-[70vh] lg:h-[100vh]">
@@ -38,10 +39,13 @@ export default function Home() {
       </div>
 {/* middle sectiton */}
       <div>
-<BigBoxComp/>
-      </div>
+{/* <BigBoxComp/> */}
+<BigBoxCustum backgroundColorProp ="bg-blue-600/70"
+titleProp ="Vacation ideas for summer"
+textProp ="Celebrate the summer season your way with sunny destinations and more."
+   />
   {/* <Address/> */}
-     
+  </div> 
     </div>
   );
 }
