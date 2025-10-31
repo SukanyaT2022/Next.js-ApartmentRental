@@ -39,7 +39,7 @@ export default function Home() {
 {/* middle sectiton */}
       <div>
 {/* <BigBoxComp/> */}
-<BigBoxCustum backgroundColorProp ="bg-blue-600"
+<BigBoxCustum backgroundColorProp ="bg-linear-to-t from-sky-500 to-indigo-500"
 titleProp ="Vacation ideas for summer"
 textProp ="Celebrate the summer season your way with sunny destinations and more."
    />
