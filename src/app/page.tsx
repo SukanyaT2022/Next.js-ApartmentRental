@@ -7,13 +7,12 @@ import {data} from "../utils/data";
 import IconComp from "./components/IconComp";
 import BigBoxComp from "./components/BigBoxComp";
 import BigBoxCustum from "./components/BigBoxCustum";
+import GuaranteeComp from "./components/GuaranteeComp";
 export default function Home() {
   return (
     <div className="w-full h-[70vh] md:h-[70vh] lg:h-[100vh]">
       <div>
-        <p>test hello</p>
-        <Header/>
-    
+        <Header/>   
       </div>
 {/* row icon component */}
 
@@ -40,11 +39,15 @@ export default function Home() {
 {/* middle sectiton */}
       <div>
 {/* <BigBoxComp/> */}
-<BigBoxCustum backgroundColorProp ="bg-blue-600/70"
+<BigBoxCustum backgroundColorProp ="bg-blue-600"
 titleProp ="Vacation ideas for summer"
 textProp ="Celebrate the summer season your way with sunny destinations and more."
    />
-  {/* <Address/> */}
+{/* end big box */}
+
+{/* GuaranteeComponent */}
+<GuaranteeComp />
+
   </div> 
     </div>
   );

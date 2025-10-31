@@ -64,7 +64,6 @@ background-size: cover;
   width: 0px;
   height: 2px;
   background-color:blue;
-
 }
 .styleIcon:hover::after{
   width: 100%;
