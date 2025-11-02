@@ -1,20 +1,21 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import InputComp from "./components/InputComp";
-import Address from "./components/Address";
+import Address from "./components/AddressSearch";
 import CardComp from "./components/CardComp";
 import {data} from "../utils/data";
 import IconComp from "./components/IconComp";
 import BigBoxComp from "./components/BigBoxComp";
 import BigBoxCustum from "./components/BigBoxCustum";
 import GuaranteeComp from "./components/GuaranteeComp";
+import AddressSearch from "./components/AddressSearch";
 export default function Home() {
   return (
     <div className="w-full h-[70vh] md:h-[70vh] lg:h-[100vh]">
       <div>
         <Header/>   
       </div>
-{/* row icon component */}
+{/* row icon component */} 
 
 <IconComp/>
 
@@ -47,6 +48,7 @@ textProp ="Celebrate the summer season your way with sunny destinations and more
 
 {/* GuaranteeComponent */}
 <GuaranteeComp />
+
 
   </div> 
     </div>
