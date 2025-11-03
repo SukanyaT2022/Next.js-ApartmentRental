@@ -11,7 +11,7 @@ const SearchBoxComp = () => {
       <AddressSearch/>
       <InputComp labelProp='' iconProp = {<FaMapPin className="text-gray-700 text-lg flex-shrink-0" /> }  typeProp='' placeholderProp=''/>
       <InputComp labelProp='Travelers' iconProp = {<FaMapPin className="text-gray-700 text-lg flex-shrink-0" />}  typeProp=''  placeholderProp='2 Travelers'/>
-      <button className='bg-blue-600 p-4 rounded-2xl font-bold text-white w-[55%] lg:ml-4 lg:mt-0 md:mt-3 mt-3'>Search</button>
+      <button className='bg-blue-600 p-4 rounded-2xl font-bold text-white w-full lg:ml-4 lg:mt-0 md:mt-3 mt-3'>Search</button>
     </div>
   )
 }

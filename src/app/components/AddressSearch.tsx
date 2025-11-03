@@ -50,7 +50,7 @@ export default function AddressSearch() {
   };
 
   return (
-  <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[500px] relative">
+  <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[300px] relative">
     <input
       type="text"
       value={address}
@@ -58,7 +58,7 @@ export default function AddressSearch() {
       onInput={handleSearch}
       onKeyPress={handleKeyPress}
       placeholder="Enter an address (e.g., 555 5th Ave New York NY 10017 US)"
-      className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[500px] px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition-colors"
+      className=" lg:w-[300px] bg-white flex flex-col justify-center border-gray-300 border-1 rounded-2xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]"
     />
 
     {results.length > 0 && (
@@ -78,13 +78,13 @@ export default function AddressSearch() {
                 {result.display_name}
               </h3>
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
-                <div>
+                {/* <div>
                   <span className="font-medium">Latitude:</span> {result.lat}
                 </div>
                 <div>
                   <span className="font-medium">Longitude:</span> {result.lon}
-                </div>
-                {result.type && (
+                </div> */}
+                {/* {result.type && (
                   <div>
                     <span className="font-medium">Type:</span> {result.type}
                   </div>
@@ -94,7 +94,7 @@ export default function AddressSearch() {
                     <span className="font-medium">Importance:</span>{' '}
                     {(result.importance * 100).toFixed(1)}%
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           ))}
