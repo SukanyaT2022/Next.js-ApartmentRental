@@ -2,7 +2,11 @@
 import React, { useState } from 'react'
 import { Search, MapPin, Loader2 } from 'lucide-react';
 
-export default function AddressSearch() {
+interface AddressSearchProps {
+  className?: string;
+}
+
+export default function AddressSearch({ className }: AddressSearchProps) {
   const [address, setAddress] = useState('');
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -50,7 +54,7 @@ export default function AddressSearch() {
   };
 
   return (
-  <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[300px] relative">
+  <div className={`w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[300px] relative ${className || ''}`}>
     <input
       type="text"
       value={address}
