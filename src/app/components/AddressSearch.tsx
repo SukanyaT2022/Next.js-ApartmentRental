@@ -54,25 +54,25 @@ export default function AddressSearch({ className }: AddressSearchProps) {
   };
 
   return (
-  <div className={`w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[300px] relative ${className || ''}`}>
+  <div className={`relative ${className || ''}`}>
     <input
       type="text"
       value={address}
       onChange={(e) => setAddress(e.target.value)}
       onInput={handleSearch}
       onKeyPress={handleKeyPress}
-      placeholder="Enter an address (e.g., 555 5th Ave New York NY 10017 US)"
-      className=" lg:w-[300px] bg-white flex flex-col justify-center border-gray-300 border-1 rounded-2xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]"
+      placeholder="Your destination"
+      className=" xl:w-[450px] lg:w-[300px] w-full bg-white outline-0 focus:border-blue-500 focus:border-1 flex flex-col justify-center border-gray-300 border-1 rounded-2xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]"
     />
 
     {results.length > 0 && (
-      <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-96 overflow-y-auto z-50">
-        <div className="p-3 border-b border-gray-200 bg-gray-50">
+      <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-2xl shadow-lg max-h-96 overflow-y-auto z-50">
+        {/* <div className="p-3 border-b border-gray-200 bg-gray-50">
           <h2 className="text-sm font-semibold text-gray-700">
             Results ({results.length})
           </h2>
-        </div>
-        <div className="p-2 space-y-2">
+        </div> */}
+        <div className="p-2 space-y-2 xl:h-40 lg:h-40 md:h-auto h-75 overflow-y-scroll">
           {results.map((result, index) => (
             <div
               key={index}
