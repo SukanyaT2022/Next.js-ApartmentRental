@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Search, MapPin, Loader2 } from 'lucide-react';
-
+import { IoCloseSharp } from "react-icons/io5";
 interface AddressSearchProps {
   className?: string;
 }
@@ -11,6 +11,10 @@ export default function AddressSearch({ className }: AddressSearchProps) {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+ 
+ console.log(results, "test results");
+ console.log(results.length, "test length");
+
 
   const handleSearch = async () => {
     if (!address.trim()) {
@@ -55,6 +59,7 @@ export default function AddressSearch({ className }: AddressSearchProps) {
 
   return (
   <div className={`relative ${className || ''}`}>
+    <div className='flex items-center justify-between gap-2'>
     <input
       type="text"
       value={address}
@@ -62,9 +67,14 @@ export default function AddressSearch({ className }: AddressSearchProps) {
       onInput={handleSearch}
       onKeyPress={handleKeyPress}
       placeholder="Your destination"
-      className=" xl:w-[450px] lg:w-[300px] w-full bg-white outline-0 focus:border-blue-500 focus:border-1 flex flex-col justify-center border-gray-300 border-1 rounded-2xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]"
+      className=" xl:w-[450px] lg:w-[300px] w-full bg-white outline-0 focus:border-blue-500 focus:border-1 flex flex-col justify-center border-gray-300 border-1 lg:rounded-2xl rounded-4xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]"
     />
-
+    {/* //below div we put position on X icon -- chage position put on the div*/}
+    <div className='absolute right-4 top-4.5 cursor-pointer'>
+      {/* //icon to remove all info inside */}
+    <IoCloseSharp className='text-2xl text-blue-500' onClick={()=>{setAddress('')}}/>
+    </div>
+</div>
     {results.length > 0 && (
       <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-2xl shadow-lg max-h-96 overflow-y-auto z-50">
         {/* <div className="p-3 border-b border-gray-200 bg-gray-50">
@@ -75,6 +85,12 @@ export default function AddressSearch({ className }: AddressSearchProps) {
         <div className="p-2 space-y-2 xl:h-40 lg:h-40 md:h-auto h-75 overflow-y-scroll">
           {results.map((result, index) => (
             <div
+            onClick={() => {
+                   //on click when select value of london it fill inside input box
+              setAddress(result.display_name);
+              //line 90 close the search result back ot empty array so the drop down disappeear
+              setResults([]);
+            }}
               key={index}
               className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
             >

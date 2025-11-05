@@ -17,7 +17,7 @@ const InputComp = ({labelProp,typeProp, placeholderProp,iconProp, className}:Inp
       {/* <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-[300px]"> */}
       <div className="w-full">
         {/* //below target individual input box */}
-        <div className="w-full bg-white flex flex-col justify-center border-gray-300 border-1 rounded-2xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]">
+        <div className="w-full bg-white flex flex-col justify-center border-gray-300 border-1 lg:rounded-2xl rounded-4xl px-6 py-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-[60px]">
           
           {/* Label - always reserve space for consistency */}
           <div className="h-6 flex items-start mb-1 ">
