@@ -1,6 +1,11 @@
+"use client";
+//use router to connect to detail page
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaRegHeart } from "react-icons/fa";
+
 interface CardCompProps {
+idProp: number; 
 imageSrcProp?: string;
 pricePerNightProp?: number;
 ratingProp?: number;
@@ -8,12 +13,20 @@ reviewsCountProp?: number;
 locationProp?: string;
 bedroomsProp?: number;
 propertyTypeProp?: string;
+
 }
-const CardComp = ({imageSrcProp, pricePerNightProp, ratingProp, reviewsCountProp, locationProp, bedroomsProp, propertyTypeProp}:CardCompProps) => {
+const CardComp = ({idProp,
+ imageSrcProp, pricePerNightProp, ratingProp, reviewsCountProp, locationProp, bedroomsProp, propertyTypeProp}:CardCompProps) => {
+const router = useRouter()
+  
   return (
 
-<div className=" bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+<div 
+  onClick={() => router.push(`/${idProp}`)}
+  className=" bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  >
   <div className='relative'>
+    <p>Key : {idProp}</p>
   <a href="#">
     <img
       className="rounded-t-lg h-[200px] w-full object-cover "

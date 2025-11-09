@@ -24,14 +24,16 @@ export default function Home() {
      {
       data.map((item)=>(
         <CardComp 
-        key={item.id}
-        imageSrcProp={item.image}
-        pricePerNightProp={item.price}
-        ratingProp={item.rating}
-        reviewsCountProp={item.reviews}
-        locationProp={`${item.type} in Paradise`}
-        bedroomsProp={item.bedrooms}
-        propertyTypeProp={item.type}
+          key = {item.id}
+          idProp = {item.id}
+          imageSrcProp={item.image}
+          pricePerNightProp={item.price}
+          ratingProp={item.rating}
+          reviewsCountProp={item.reviews}
+          locationProp={`${item.type} in Paradise`}
+          bedroomsProp={item.bedrooms}
+          propertyTypeProp={item.type}
+         
         />
       ))
      }
