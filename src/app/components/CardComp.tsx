@@ -22,7 +22,8 @@ const router = useRouter()
   return (
 
 <div 
-  onClick={() => router.push(`/${idProp}`)}
+//link to detail page with id of specific id that user click
+  onClick={() => router.push(`/detailPage/${idProp}`)}
   className=" bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
   >
   <div className='relative'>
